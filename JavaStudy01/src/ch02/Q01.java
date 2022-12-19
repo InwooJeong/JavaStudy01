@@ -24,7 +24,7 @@ public class Q01 {
 		System.out.println("키의 최대값을 구합니다.");
 		
 		int num = 1 + rand.nextInt(20); //사람 수를 1~20의 난수로 생성
-		int[] height = new int[num]; // 요소수 num인 배열 생성
+		int[] height = new int[num]; // 요소수 num인 배열 생성;
 		
 		System.out.println("사람수는 " + num + "명");
 		System.out.println("키는 : ");
