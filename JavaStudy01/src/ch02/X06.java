@@ -24,7 +24,7 @@ public class X06 {
 		System.out.print("요소수 : ");
 		int num = inputInt.nextInt(); //요소수
 		
-		int[] x = new int[num]; //요소수가 num인 배열//
+		int[] x = new int[num]; //요소수가 num인 배열
 		
 		for(int i=0;i<num;i++) {
 			System.out.print("x["+i+"] : ");
