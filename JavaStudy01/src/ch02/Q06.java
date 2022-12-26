@@ -1,9 +1,9 @@
 package ch02;
 
 import java.util.Scanner;
-//입력 받은 10진수를 2진수 ~ 32진수로 기수 변환하여 나타냄
+//입력 받은 10진수를 2진수 ~ 32진수로 기수 변환하여 나타냄(윗자리부터 배열에 저장)
 
-public class X08 {
+public class Q06 {
 	
 	static int cardConvR(int x, int r, char[] d) {
 		//정수 x를 r진수로 변환하여 배열 d에 아랫자리부터 넣어두고 자리수를 반환
@@ -14,6 +14,13 @@ public class X08 {
 			d[digits++] = dchar.charAt(x % r); //r로 나눈 나머지를 저장
 			x /= r;
 		}while(x != 0);
+		
+		for(int i=0;i<digits/2;i++) {
+			char temp = d[i];
+			d[i] = d[digits-i-1];
+			d[digits-i-1] = temp;
+		}
+		
 		return digits;
 	}
 
@@ -41,7 +48,7 @@ public class X08 {
 			dno = cardConvR(no, cd, cno);
 			
 			System.out.println(cd + "진수로는 ");
-			for(int i=dno-1;i>=0;i--) {
+			for(int i=0;i<dno;i++) {
 				System.out.print(cno[i]);
 			}
 			System.out.println("입니다.");
